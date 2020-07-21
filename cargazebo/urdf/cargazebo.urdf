@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cargazebo">
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="-3.10508648253747E-17 4.10835462605806E-17 0.025"
+        rpy="0 0 0" />
+      <mass
+        value="199.41079608564" />
+      <inertia
+        ixx="16.6880928622672"
+        ixy="1.14959311601354E-15"
+        ixz="-1.04369679817107E-17"
+        iyy="4.65839828138953"
+        iyz="2.98189478751404E-17"
+        izz="21.2647449290971" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel r1">
+    <inertial>
+      <origin
+        xyz="-0.075 0 -6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="81.875" />
+      <inertia
+        ixx="0.93031"
+        ixy="-1.816E-33"
+        ixz="1.0584E-33"
+        iyy="0.61867"
+        iyz="7.1066E-37"
+        izz="0.61867" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/wheel r1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/wheel r1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel r1 link"
+    type="continuous">
+    <origin
+      xyz="-0.3 -0.025 -0.3"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="wheel r1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="wheel r2">
+    <inertial>
+      <origin
+        xyz="-0.075 5.5511E-17 -6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="81.875" />
+      <inertia
+        ixx="0.93031"
+        ixy="-1.816E-33"
+        ixz="1.0584E-33"
+        iyy="0.61867"
+        iyz="7.1066E-37"
+        izz="0.61867" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/wheel r2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/wheel r2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel r2 joint"
+    type="continuous">
+    <origin
+      xyz="-0.3 -0.025 0.3"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="wheel r2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="wheel l1">
+    <inertial>
+      <origin
+        xyz="0.075 -0.01 0"
+        rpy="0 0 0" />
+      <mass
+        value="81.875" />
+      <inertia
+        ixx="0.93031"
+        ixy="1.0682E-20"
+        ixz="1.3014E-18"
+        iyy="0.61867"
+        iyz="0"
+        izz="0.61867" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/wheel l1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/wheel l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel l1 link"
+    type="continuous">
+    <origin
+      xyz="0.3 -0.015829 -0.30399"
+      rpy="-0.41002 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="wheel l1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="wheel l2 ">
+    <inertial>
+      <origin
+        xyz="0.075 5.5511E-17 -6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="81.875" />
+      <inertia
+        ixx="0.93031"
+        ixy="-1.816E-33"
+        ixz="1.0584E-33"
+        iyy="0.61867"
+        iyz="7.1066E-37"
+        izz="0.61867" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/wheel l2 .STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cargazebo/meshes/wheel l2 .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel l2 link "
+    type="continuous">
+    <origin
+      xyz="0.3 -0.025 0.3"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="wheel l2 " />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
